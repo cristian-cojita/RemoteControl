@@ -19,14 +19,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="nnf-PM-ePV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo8-A6-6CF">
-                                <rect key="frame" x="24" y="442" width="272" height="98"/>
-                                <accessibility key="accessibilityConfiguration" label="Door"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                <state key="normal" image="Door"/>
-                                <state key="selected" image="DoorTouch"/>
-                                <state key="highlighted" image="DoorTouch"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PX7-hp-djF">
                                 <rect key="frame" x="24" y="319" width="272" height="96"/>
                                 <accessibility key="accessibilityConfiguration" label="Gate"/>
@@ -34,6 +26,22 @@
                                 <state key="normal" image="Gate"/>
                                 <state key="selected" image="GateTouch"/>
                                 <state key="highlighted" image="GateTouch"/>
+                                <connections>
+                                    <action selector="GateTouchDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="lvT-OY-ym9"/>
+                                    <action selector="GateTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qGv-oL-iWu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yo8-A6-6CF">
+                                <rect key="frame" x="24" y="442" width="272" height="98"/>
+                                <accessibility key="accessibilityConfiguration" label="Door"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" image="Door"/>
+                                <state key="selected" image="DoorTouch"/>
+                                <state key="highlighted" image="DoorTouch"/>
+                                <connections>
+                                    <action selector="DoorTouchDown:" destination="vXZ-lx-hvc" eventType="touchDown" id="wqv-SW-gdr"/>
+                                    <action selector="DoorTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EwR-fr-vYk"/>
+                                </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfm-ZC-R33">
                                 <rect key="frame" x="24" y="179" width="272" height="21"/>
