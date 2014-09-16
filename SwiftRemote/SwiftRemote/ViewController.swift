@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Foundation
+import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var DoorBtn: UIButton!
+    @IBOutlet weak var GateBtn: UIButton!
+    @IBOutlet weak var UserMessage: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
