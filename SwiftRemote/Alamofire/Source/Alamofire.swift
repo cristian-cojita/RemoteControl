@@ -914,8 +914,8 @@ extension Request {
 // MARK: - Convenience
 
 private func URLRequest(method: Method, URL: String) -> NSURLRequest {
-    let mutableURLRequest = NSMutableURLRequest(URL: NSURL(string: URL))
-    mutableURLRequest.HTTPMethod = method.toRaw()
+    let mutableURLRequest = NSMutableURLRequest(URL: NSURL(string: URL)!)
+    mutableURLRequest.HTTPMethod = method.rawValue
 
     return mutableURLRequest
 }
